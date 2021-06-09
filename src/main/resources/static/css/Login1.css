@@ -1,0 +1,173 @@
+﻿@charset "utf-8";
+/* CSS Document */
+abbr, address, article, aside, audio, canvas, command, datalist, details, dialog, figure, figcaption, footer, header, hgroup, keygen, mark, meter, menu, menuitem, nav, progress, ruby, section, summary, time, video, fieldset, dir, dfn { margin:0; padding:0; border:0; display:block;}
+a:link, a:visited, a:active { color:#666; text-decoration: none;}
+a:hover { color: #333; text-decoration: underline;}
+body { color: #333; font-family:Microsoft Yahei, Arial, Helvetica, sans-serif; font-size: 12px; margin: 0; padding: 0;}
+p { margin-top:0px; margin-bottom:10px; line-height:180%; }
+form { border: 0; margin: 0; padding: 0; display: inline;}
+h1,h2,h3,h4,h5 { margin:0;}
+ul,ol,dl,dd,dt { margin:0; padding:0; display:block;}
+li { list-style:none;}
+img { border: 0; vertical-align:middle;}
+.clear { clear:both; height:0; overflow:hidden; }
+.clearfix:before, .clearfix:after { clear:both; content:""; display:block;}
+input, select, textarea { font-size:12px; font-family:Microsoft Yahei, Arial, Helvetica, sans-serif;}
+input.input.username { background-position: left top; }
+input.input.username.focus { background-position: left -66px; }
+input.input.password { background-position: left -33px; }
+input.input.password.focus { background-position: left -66px; }
+input.input.code { width:74px; background-position: left -99px; }
+input.input.code.focus { background-position: left -132px; }
+input.input.mobile { background-position: left -165px; }
+input.input.mobile.focus { background-position: left -66px; }
+input.input.mobile-code { width:74px; background-position: left -198px; }
+input.input.mobile-code.focus { background-position: left -132px; }
+input[type=checkbox],input[type=radio] { border:0; display: inline-block; margin: 0 2px 0 0; padding: 0;width:14px;height:14px; vertical-align:middle;}
+input.button { width:180px; height:41px; padding-bottom:5px; text-align:center; font-size: 20px; overflow:visible; border:0; color:#fff; background-color:#5aa5f0; cursor:pointer; }
+input.button.fetch { width:auto; background:none; background-color:#2d59bd; height:30px; border-radius:5px; padding:0 10px; font-size:12px;}
+#login-index a:link, #login-index a:visited, #login-index a:active { color:#fff;}
+#login-index ul {}
+#login-index ul li { float:left; width:50%; font-size:14px; text-align:center; padding-bottom:10px; color:#7291d8; cursor:pointer;}
+#login-index dl { margin-top:10px;color:#ffcc00;}
+#login-index dl.error_msg { color:#ffcc00;}
+#login-index dl span.right{margin-left:65px;}
+
+
+.contentTips { color:#999;}
+.blue, .blue a:link, .blue a:visited, .blue a:active { color:#5aa5f0;}
+.blue a:hover { text-decoration:underline;}
+.L-rulse{
+	width:283px;
+	height:14px;
+	line-height:14px;
+	margin-left:21px;
+	color:#ff0000;
+	padding-left:19px;
+}
+/*--------5.页面顶部到菜单部分--------*/
+header#header { height:60px; min-width:990px; padding-top:12px;}
+
+header#header hgroup { margin:0 auto; width:950px;}
+
+
+/*section#login aside.adv { float:left; width:572px; height:359px; background-color:#fff; border-bottom:1px #fff solid;}
+section#login aside.adv li { float:left; margin:1px 0 0 1px; position:relative;}
+section#login aside.adv li span { position:absolute;}
+section#login aside.adv li article.join { width:159px; height:70px; background-color:#262f72; color:#fff; padding:20px;}
+section#login aside.adv li article.join b { display:block; margin-bottom:5px; font-size:14px;}*/
+section#login article.login-form { width:950px; margin:0 auto;}
+section#login aside.form { float:right; width:390px; box-shadow:0px 5px 12px #ccc; }
+section#login aside.form .error_msg { margin:0px 0 10px 20px; color:#f60;}
+section#login aside.form h2 { height:45px; line-height:45px; font-size:16px; font-weight:normal;}
+section#login aside.form h2 li { float:left;  width:210px; text-align:center; background-color:#5aa5f0;  cursor:pointer;  color:#fff;}
+section#login aside.form h2 li.left { }
+section#login aside.form h2 li.active { background-color:#fff; color:#5aa5f0;}
+section#login aside.form article { padding:35px 15px 20px 10px; background-color:#fff; min-height:325px;position:relative; border-radius:4px;}
+section#login aside.form article  p.slo { padding-left:20px; font-size:16px; margin-bottom:24px;}
+section#login aside.form article dl { clear:both; width:100%; display:inline-block;  padding-bottom:14px; position:relative;}
+section#login aside.form article dl dt { float:left; width:70px; text-align:right; padding-right:15px; font-size:14px;line-height: 32px;}
+section#login aside.form article dl dd { float:left; width:265px;}
+section#login aside.form article dl dd span { color:#ff6600 !important;}
+section#login aside.form article dl dd input { vertical-align:middle;}
+section#login aside.form article dl dd .input { width:140px; font-size:14px; background:none; border:1px solid; border-top-color:#d1d1d1; border-bottom-color:#d1d1d1; border-right-color:#e5e5e5; border-left-color:#e5e5e5;  height:24px; padding:5px; border-radius:3px;}
+section#login aside.form article dl dd .input.code { width:132px;}
+section#login aside.form article dl dd .input.long { width:250px;}
+section#login aside.form article dl dd .input.error {border:1px #DC4E02 solid; background-color:#FFF0F0;}
+section#login aside.form article dl dd .kaptchaImage {width:110px; height:36px;}
+section#login aside.form article dl dd .button { width:auto; margin-left:10px; font-size:12px; max-width:140px; padding:0 10px;}
+section#login aside.form article dl dd .button.gray {background-color:#999999;}
+section#login aside.form article dl dd .button.red {background-color:#ff6600;}
+section#login aside.form article p.btn { text-align:left; margin:0; padding:10px 0px 10px 85px ;}
+section#login aside.form article p.btn input.button {width:262px; height:46px; line-height:46px; border-radius:3px; border:none; font-size:18px; color:#FFF; text-align:center; cursor:pointer;}
+section#login aside.form article p.btn input.button-red { background-color:#ff6600;width:262px; height:46px; border:none; font-size:18px; color:#FFF; text-align:center; cursor:pointer;}
+section#login aside.form article p.btn input.button.gray { background-color:#999999;}
+section#login aside.form article p.text { text-align:center; padding-left:32px;}
+section#login aside.form article p.bottom {background-color:#fcfcfc; position: absolute; left: 0px; bottom: 0px; text-align: center; width: 100%; margin: 0px;height:37px; line-height: 40px;}
+
+section#login aside.adv { height: 116px; padding-top:45px; margin:45px auto 0 auto; overflow:hidden;}
+section#login aside.adv ul { margin:0 auto; width:1000px;}
+section#login aside.adv ul.adv_en{display:none;}
+section#login aside.adv li { float:left;  margin:0px 20px;  position:relative; box-shadow:0px 0px  50px #FFF; border:2px solid #fff; border-radius: 3px;}
+section#login aside.adv li img{border-radius: 3px;}
+section#login aside.adv li article.join { background-color: #262f72; color: #fff; height: 70px;  padding: 20px;  width: 159px; }
+section#login aside.adv li article.join b { display: block; font-size: 14px; margin-bottom: 5px;}
+
+
+/*--------2.底部--------*/
+/*#footer { padding:40px 0; background:#f1f1f1 url(../images/public/bg-footer.jpg) left top repeat-x; text-align:center; line-height: 200%;}
+#footer hgroup { width:990px; margin:0 auto;}*/
+
+
+
+/*----------3.MessageBox样式------------*/
+/*#MessageBox { border-radius: 5px; display: none; font-size: 14px; position: fixed; width: 455px; z-index: 10002; }
+#MessageBox-Shield { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 10000; opacity: 0.4; background: #666666; display: none; }
+#MessageBox .title { background: #5aa5f0; color: #ffffff; height: 40px; line-height: 40px; }
+#MessageBox .title .ico { background: url(../images/public/map-mark.png) no-repeat left -1150px; width: 22px; height: 22px; position: relative; top: 60px; left: 20px!important; }
+#MessageBox .title.blue_yes { background: #5aa5f0; }
+#MessageBox .title.blue_yes .ico { background-position: left -1150px; }
+#MessageBox .title.blue_question { background: #5aa5f0; }
+#MessageBox .title.blue_question .ico { background-position: -22px -1150px; }
+#MessageBox .title.blue_i { background: #5aa5f0; }
+#MessageBox .title.blue_i .ico { background-position: -44px -1150px; }
+#MessageBox .title.red_alert { background: #ff6600; }
+#MessageBox .title.red_alert .ico { background-position: -88px -1150px; }
+#MessageBox .title.red_no { background: #ff6600; }
+#MessageBox .title.red_no .ico { background-position: -66px -1150px; }
+#MessageBox .title .text { position: relative; top: -22px; left: 20px; font-size: 16px; width: 300px; opacity: 0; filter: alpha(opacity=0); -moz-user-select: none; -webkit-user-select: none; }
+#MessageBox .title .text .close { background: url(/resource3/images/icon_white_close.png) left top no-repeat; width: 11px; height: 11px; position: relative; top: -82px; left: 425px; cursor: pointer; }
+#MessageBox .content { background-color: #ffffff; padding: 20px; }
+#MessageBox .content b { padding: 0 30px; display: block; }
+#MessageBox .content span { display: block; margin-top: 20px; text-align: center; }
+#MessageBox .content.red_alert .button, #MessageBox .content.red_no .button { background-color: #ff6600; }
+#MessageBox .content .button#cancel { margin-left: 20px; }
+#MessageBox div.hongbao {background: url(/cesso/resource4/images/login/firstSuccess.png) left top no-repeat;width: 575px;height: 272px;position: relative;}
+#MessageBox img.hongbao {width: 89px;height: 38px;position: absolute;top: 213px; left: 245px; cursor: pointer;}
+#TipsBox { border: 1px solid #5aa5f0; width: 500px; }
+#TipsBox h2 { font-size: 14px; background-color: #5aa5f0; padding: 10px; color: #ffffff; position: relative; }
+#TipsBox h2 mark { position: absolute; right: 10px; top: 8px; }
+#TipsBox article { padding: 30px; text-align: center; }
+#TipsBox article p.success { font-size: 18px; margin-bottom: 30px; }
+#TipsBox article p.success mark { margin-right: 20px; }*/
+
+/**/
+.footer_add_bg{
+	width:100%;
+	background:#f9f9f9;
+	padding:10px 0 15px 0;
+}
+.webbottom-other {
+    width: 950px;
+    height: 90px;
+    margin: 0px auto;
+}
+.footerlift {
+    margin-left: 20px;
+}
+.fl {
+    float: left;
+}
+.footerlift a {
+    color: #333;
+    line-height: 50px;
+    padding: 0px 9px;
+	font-size:13px;
+}
+.footerlift a:hover{
+	color:#00C;
+}
+.footerright {
+    margin-right: 20px;
+    color: #333;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.ri {
+    float: right;
+}
+.footer-bo {
+    clear: both;
+    color: #666;
+    padding-left: 28px;
+}

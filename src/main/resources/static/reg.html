@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            font-size: 14px ;
+            margin: 10px auto;
+        }
+        #app{
+            width: 1000px;
+        }
+        .message{
+            font-size: 10px;
+            color: green;
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <h1>注册</h1>
+<form>
+    用户名<input type="text"  name="uname"   v-model ="uname" @blur="isUnameValid()">
+        <span :class="{'error': isError,'message': isMessage}">{{message}}</span>
+   <br/>
+    密码<input type="password"  name="upwd "  v-model ="upwd">
+    <br/>
+    <input type="button"  name="upwd " value="注册" @click="reg()"  :disabled="isvalid">
+    <a href="login.html">登录</a>
+</form>
+</div>
+
+<script src="js/vue.js"></script>
+<script src="js/axios.js"></script>
+<script>
+    let vm =new Vue({
+        el:"#app",
+        data:{
+            uname:'',
+            upwd:'',
+            message:'用户名必须为6-10位以上数字字母下划线做成，且不能重名',
+            isMessage:true,
+            isError:false,
+            isvalid:true //注册按钮是有效还是无效
+        },methods:{
+            isUnameValid:function () {
+                let reg=/^\w{6,10}$/;
+                if(!reg.test(this.uname)){
+                    this.message="用户名必须为6-10位以上数字字母下划线组成";
+                    this.isError=true;
+                    this.isvalid=true;
+                    return;
+                }
+                let params = new URLSearchParams();
+                params.append("uname",this.uname);
+                axios.post('isUnameValid.action',params).then(response =>{
+                    if(response.data.code==0){
+                        this.message=response.data.msg;
+                        this.isError=true;
+                        this.isvalid=true;
+                    }
+                    this.message='用户名可以使用';
+                    this.isError=false;
+                    this.isvalid=false;
+                });
+            },
+            reg: function () {
+                let params = new URLSearchParams();
+                params.append("uname",this.uname);
+                params.append("upwd",this.upwd);
+                axios.post('reg.action',params).then(response =>{
+                    if(response.data.code==0){
+                        alert("注册失败,原因"+response.data.msg);
+                        return;
+                    }
+                    alert("注册成功");
+                });
+            }
+        }
+    });
+</script>
+</body>
+</html>
